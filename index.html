@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Passions+Conflict&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/861f510dfd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="src/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  </head>
+<body>
+  <div class="container">
+    <header>
+      <h1 class="display-6">Wheather forecast for</h1>
+      <div class="d-flex justify-content-around text-center current-weather">
+        <div class="col-4 today align-self-center">
+          <span id="current-day">Today:</span>
+          <br />
+          <i class="fa-solid fa-cloud-rain rainy"> rainy</i>
+          <br />
+          <span id="current-temperature" class="current-temperature">19</span><a href="#" id="celcias" class="text-decoration-none celcias">°C</a>
+          <!-- |<a href="#" id="fahrenheit" class="text-decoration-none fahrenheit">°F</a> -->
+        </div>
+        <div class="col-4 city align-self-center" id="city">
+          Kyiv
+        </div>
+      </div>
+    </header>
+    <div class="main-content">
+      <form class="search-bar" id="search-bar">
+        <input type="search" 
+          autofocus 
+          name="input-field" 
+          class="input-field"
+          id="input-field"
+          placeholder="Type a city">
+        <input type="submit" 
+          value="Search" 
+          name="search" 
+          class="search">
+        <input type="button"
+          value="Current location"
+          name="current-location"
+          class="current-location"
+          id="current-location"
+      >
+      </form>
+      <div class="d-flex justify-content-center text-center">
+        <div class="col-2 day">
+          Thursday [30.09]:
+          <br />
+          <i class="fa-solid fa-cloud-sun cloudy"> cloudy</i>
+          <br />
+          17°C
+        </div>
+        <div class="col-2 day">
+          Friday [01.10]:
+          <br />
+          <i class="fa-solid fa-sun sunny"> sunny</i>
+          <br />
+          19°C
+        </div>
+        <div class="col-2 day">
+          Saturday [02.10]:
+          <br />
+          <i class="fa-solid fa-sun sunny"> sunny</i>
+          <br />
+          18°C
+        </div>
+        <div class="col-2 day">
+          Sunday [03.10]:
+          <br />
+          <i class="fa-solid fa-sun sunny"> sunny</i> 
+          <br />
+          20°C
+        </div>
+        <div class="col-2 day">
+          Monday [04.10]:
+          <br />
+          <i class="fa-solid fa-cloud-rain rainy"> rainy</i>
+          <br />
+          18°C
+        </div>
+      </div>
+    </div>
+    <footer>
+      <span class="coder">
+        Coded by Oleksandra Kondieieva
+      </span>
+    </footer>
+  </div>  
+  <script src="src/app.js"></script>
+</body>
+</html>
