@@ -106,3 +106,10 @@ a:active {
 a:focus {
     font-weight: 800;
 }
+.open-source {
+    text-decoration: none;
+    color: #4e3ef8;
+}
+.open-source:hover {
+    text-decoration: underline;
+}
