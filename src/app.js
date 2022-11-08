@@ -24,7 +24,6 @@ function formatDate(timestamp) {
 
 
 function displayTemperature(response) {
-    console.log(response);
     let temperatureElement = document.querySelector("#current-temperature");
     let cityElement = document.querySelector("#city");
     let conditionElement = document.querySelector("#condition");
@@ -42,8 +41,22 @@ function displayTemperature(response) {
     iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
-let apiKey = "8ca7dd4e61360b90fb66918853670e48";
-let city = "Oslo";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+function search(city) {
+    let apiKey = "8ca7dd4e61360b90fb66918853670e48";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(displayTemperature);
 
-axios.get(apiUrl).then(displayTemperature);
+}
+
+
+function handleSubmit(event) {
+    event.preventDefault();
+
+    let cityInputElement = document.querySelector("#input-field");
+    cityInputElement = cityInputElement.value.trim();
+    search(cityInputElement);
+}
+
+
+let form = document.querySelector("#search-bar");
+form.addEventListener("submit", handleSubmit);
