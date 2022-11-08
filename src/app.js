@@ -31,8 +31,9 @@ function displayTemperature(response) {
     let windSpeedElement = document.querySelector("#wind-speed");
     let dateElement = document.querySelector("#current-day");
     let iconElement = document.querySelector("#main-icon");
+    celciusTemperature = response.data.main.temp;
 
-    temperatureElement.innerHTML = Math.round(response.data.main.temp);
+    temperatureElement.innerHTML = Math.round(celciusTemperature);
     cityElement.innerHTML = response.data.name;
     conditionElement.innerHTML = response.data.weather[0].description;
     humidityElement.innerHTML = response.data.main.humidity;
@@ -57,6 +58,28 @@ function handleSubmit(event) {
     search(cityInputElement);
 }
 
+function showFahrenheitTemperature(event) {
+    event.preventDefault();
+    let temperatureElement = document.querySelector("#current-temperature");
+    let fahrenheitTemperature = (celciusTemperature * 9 / 5) + 32;
+    temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function showCelciusTemperature(event) {
+    event.preventDefault();
+    let temperatureElement = document.querySelector("#current-temperature");
+    temperatureElement.innerHTML = Math.round(celciusTemperature);
+}
+
+let celciusTemperature = null;
 
 let form = document.querySelector("#search-bar");
 form.addEventListener("submit", handleSubmit);
+
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", showFahrenheitTemperature);
+
+let celcius = document.querySelector("#celcius");
+celcius.addEventListener("click", showCelciusTemperature);
+
+search("Kyiv");

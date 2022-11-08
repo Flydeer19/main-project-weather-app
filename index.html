@@ -11,8 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Passions+Conflict&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/861f510dfd.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="src/style.css">
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="src/style.css">
   </head>
 <body>
   <div class="container">
@@ -20,13 +20,17 @@
       <h1 class="display-6">Wheather forecast for</h1>
       <div class="d-flex justify-content-around text-center current-weather">
         <div class="col-4 today align-self-center">
-          Last updated: <span id="current-day"></span>
-          <br />
-          <span id="condition">rainy</span>
-          <br />
-          <img src="" id="main-icon"> 
-          <span id="current-temperature" class="current-temperature"></span><a href="#" id="celcias" class="text-decoration-none celcias">°C</a>
-          <!-- |<a href="#" id="fahrenheit" class="text-decoration-none fahrenheit">°F</a> -->
+          <div class="day-cindition">
+            Last updated: <span id="current-day"></span>
+            <br />
+            <span id="condition"></span>
+          </div>
+          <div class="image-temperature">
+            <img src="" id="main-icon"> 
+            <span id="current-temperature" class="current-temperature"></span>
+            <a href="#" id="celcius" class="text-decoration-none celcius active">°C</a>
+            |<a href="#" id="fahrenheit" class="text-decoration-none fahrenheit">°F</a>
+          </div>
           <div class="precipitation">
             Humidity: <span id="humidity"></span>%
             <br />
@@ -34,7 +38,6 @@
           </div>
         </div>
         <div class="col-4 city align-self-center" id="city">
-          Kyiv
         </div>
       </div>
     </header>
