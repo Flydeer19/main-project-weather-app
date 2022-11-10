@@ -25,23 +25,12 @@ footer {
     text-align: center;
     font-size: smaller;
 }
-.col-2 {
-    border: 2px solid #f9722f;
-}
+
 .city {
     font-size: 60px;
     font-weight: 400;
 }
-.rainy {
-    color: rgb(115, 115, 251);
-}
 
-.sunny {
-    color: rgb(246, 183, 66)
-}
-.cloudy {
-    color: #888888;
-}
 .today {
     font-size: x-large;
 }
@@ -143,4 +132,19 @@ a {
 
 #condition {
     font-size: 25px;
+}
+
+.forecast {
+    border: 2px solid #f9722f;
+}
+
+.weather-forecast-day {
+    font-size: 16px;
+}
+
+.weather-forecast-temperatures {
+    font-size: 14px;
+}
+.weather-forecast-min {
+    opacity: 0.6;
 }
