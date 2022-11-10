@@ -20,16 +20,19 @@
       <h1 class="display-6">Wheather forecast for</h1>
       <div class="d-flex justify-content-around text-center current-weather">
         <div class="col-4 today align-self-center">
-          <div class="day-cindition">
+          <div class="day-condition">
             Last updated: <span id="current-day"></span>
             <br />
             <span id="condition"></span>
           </div>
           <div class="image-temperature">
             <img src="" id="main-icon"> 
-            <span id="current-temperature" class="current-temperature"></span>
-            <a href="#" id="celcius" class="text-decoration-none celcius active">°C</a>
-            |<a href="#" id="fahrenheit" class="text-decoration-none fahrenheit">°F</a>
+            <div class="temperature">
+              <span id="current-temperature" class="current-temperature"></span>
+              <div class="temperature-units">
+                <a href="#" id="celcius" class="celcius active">°C</a>|<a href="#" id="fahrenheit" class=" fahrenheit">°F</a>
+              </div>
+            </div>
           </div>
           <div class="precipitation">
             Humidity: <span id="humidity"></span>%

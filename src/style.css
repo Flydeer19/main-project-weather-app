@@ -92,7 +92,7 @@ form {
 }
 
 .current-temperature {
-    font-size: 50px;
+    font-size: 55px;
 }
 
 .open-source {
@@ -103,12 +103,44 @@ form {
     text-decoration: underline;
 }
 
+a {
+    text-decoration: none;
+}
+
 .active {
     color: rgb(75, 74, 74);
-    text-decoration: none;
     cursor: default;
 }
 
 .active:hover {
     color: rgb(75, 74, 74);
+}
+
+.image-temperature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.temperature-units {
+    padding-left: 0px;
+    display: inline-block;
+    margin-top: 0px;
+    
+}
+
+.temperature {
+    display: inline-block;
+}
+
+.precipitation {
+    font-size: 18px;
+}
+
+.day-condition {
+    font-size: 18px;
+}
+
+#condition {
+    font-size: 25px;
 }
