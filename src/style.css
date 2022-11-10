@@ -95,21 +95,20 @@ form {
     font-size: 50px;
 }
 
-a{
-    color: rgb(75, 74, 74);
-}
-
-a:active {
-    color: rgb(75, 74, 74);
-}
-
-a:focus {
-    font-weight: 800;
-}
 .open-source {
     text-decoration: none;
     color: #4e3ef8;
 }
 .open-source:hover {
     text-decoration: underline;
+}
+
+.active {
+    color: rgb(75, 74, 74);
+    text-decoration: none;
+    cursor: default;
+}
+
+.active:hover {
+    color: rgb(75, 74, 74);
 }

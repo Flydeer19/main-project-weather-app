@@ -61,14 +61,22 @@ function handleSubmit(event) {
 function showFahrenheitTemperature(event) {
     event.preventDefault();
     let temperatureElement = document.querySelector("#current-temperature");
+
+    celcius.classList.remove("active");
+    fahrenheit.classList.add("active");
+
     let fahrenheitTemperature = (celciusTemperature * 9 / 5) + 32;
     temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 function showCelciusTemperature(event) {
     event.preventDefault();
+
+    celcius.classList.add("active");
+    fahrenheit.classList.remove("active");
     let temperatureElement = document.querySelector("#current-temperature");
     temperatureElement.innerHTML = Math.round(celciusTemperature);
+
 }
 
 let celciusTemperature = null;
