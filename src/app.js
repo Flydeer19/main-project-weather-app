@@ -22,6 +22,26 @@ function formatDate(timestamp) {
     return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+    let forecastElement = document.querySelector("#forecast");
+
+    let forecastHTML = "";
+    forecastHTML = `
+    <div class="row">
+        <div class="col-2 forecast">
+              <div class="weather-forecast-day">Thursday</div>
+              <img src="https://ssl.gstatic.com/onebox/weather/48/sunny.png" alt="">
+              <div class="weather-forecast-temperatures">
+                <span class="weather-forecast-max">15°</span>
+                <span class="weather-forecast-min">8°</span>
+              </div>
+        </div>
+    </div>
+    `;
+
+    forecastElement.innerHTML = forecastHTML;
+}
+
 
 function displayTemperature(response) {
     let temperatureElement = document.querySelector("#current-temperature");
@@ -80,6 +100,8 @@ function showCelciusTemperature(event) {
 }
 
 let celciusTemperature = null;
+
+displayForecast();
 
 let form = document.querySelector("#search-bar");
 form.addEventListener("submit", handleSubmit);
