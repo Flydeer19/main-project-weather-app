@@ -1,161 +1,161 @@
-h1{
-    padding-top: 10px;
-    padding-bottom: 0px;
-    text-align: center;
-    font-family: 'Indie Flower', cursive;
+h1 {
+  padding-top: 0.625rem;
+  padding-bottom: 0rem;
+  text-align: center;
+  font-family: "Indie Flower", cursive;
 }
 .current-weather {
-    margin: 0 0;
-    font-family: 'Space Mono', monospace;
-    padding: 10px;
-    border-radius: 15px;
-    background-color:  #fddccb;
+  margin: 0 0;
+  font-family: "Space Mono", monospace;
+  padding: 0.625rem;
+  border-radius: 0.938rem;
+  background-color: #fddccb;
 }
 .container {
-    margin-top: 10px;
-    background-color: #91dbe5;
-    height: 80vh;
-    width: 150vh;
-    font-family: 'Space Mono', monospace;
-    text-align: center;
-    color: rgb(75, 74, 74);
-    border-radius: 15px;
-    padding-left: 30px;
-    padding-right: 30px;
-
-
+  margin: 0.625rem auto;
+  background-color: #91dbe5;
+  height: 95vh;
+  width: 100vw;
+  font-family: "Space Mono", monospace;
+  text-align: center;
+  color: rgb(75, 74, 74);
+  border-radius: 0.938rem;
+  padding-left: 1.875rem;
+  padding-right: 1.875rem;
 }
 
 footer {
-    font-family: 'Space Mono', monospace;
-    margin-top: 75px;
-    text-align: center;
-    font-size: smaller;
+  font-family: "Space Mono", monospace;
+  margin-top: 4.688rem;
+  text-align: center;
+  font-size: smaller;
 }
 
 .city {
-    font-size: 60px;
-    font-weight: 400;
+  font-size: 3.75rem;
+  font-weight: 400;
 }
 
 .today {
-    font-size: x-large;
-   
+  font-size: x-large;
 }
 
 form {
-    display: inline-block;
+  display: inline-block;
 }
 .search-bar {
-    margin-top: 30px;
+  margin-top: 1.875rem;
 }
 .input-field {
-    margin-bottom: 30px;
-    border: 2px solid #ffcab0;
-    border-radius: 5px;
-    transition: all 150ms ease-in-out;
-    width: 350px;
-    height: 40px;
+  margin-bottom: 1.875rem;
+  border: 0.125rem solid #ffcab0;
+  border-radius: 0.313rem;
+  transition: all 150ms ease-in-out;
+  width: 21.875rem;
+  height: 2.5rem;
 }
 .input-field:hover {
-    box-shadow: 2px 3px 10px #888888;
+  box-shadow: 0.125rem 0.188rem 0.625rem #888888;
 }
 .search {
-    background-color: #fddccb;
-    border: 2px solid #f9722f;
-    border-radius: 5px;
-    transition: all 150ms ease-in-out;
-    color: rgb(75, 74, 74);
-    height: 40px;
-    width: 150px;
-    font-size: larger;
+  background-color: #fddccb;
+  border: 0.125rem solid #f9722f;
+  border-radius: 0.313rem;
+  transition: all 150ms ease-in-out;
+  color: rgb(75, 74, 74);
+  height: 2.5rem;
+  width: 9.375rem;
+  font-size: larger;
 }
 .search:hover {
-    box-shadow: 2px 3px 10px #888888;
+  box-shadow: 0.125rem 0.188rem 0.625rem #888888;
 }
 
-.current-location {
-    background-color: #b1abf8;
-    border: 2px solid #4e3ef8;
-    border-radius: 5px;
-    transition: all 150ms ease-in-out;
-    color: rgb(75, 74, 74);
-    height: 40px;
-    width: 300px;
-    font-size: larger;
+/* .current-location {
+  background-color: #b1abf8;
+  border: 0.125rem solid #4e3ef8;
+  border-radius: 0.313rem;
+  transition: all 150ms ease-in-out;
+  color: rgb(75, 74, 74);
+  height: 2.5rem;
+  width: 18.75rem;
+  font-size: larger;
 }
 .current-location:hover {
-    box-shadow: 2px 3px 10px #888888;
-}
+  box-shadow: 0.125rem 0.188rem 0.625rem #888888;
+} */
 
 .current-temperature {
-    font-size: 55px;
+  font-size: 3.438rem;
 }
 
 .open-source {
-    text-decoration: none;
-    color: #4e3ef8;
+  text-decoration: none;
+  color: #4e3ef8;
 }
 .open-source:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .active {
-    color: rgb(75, 74, 74);
-    cursor: default;
+  color: rgb(75, 74, 74);
+  cursor: default;
 }
 
 .active:hover {
-    color: rgb(75, 74, 74);
+  color: rgb(75, 74, 74);
 }
 
 .image-temperature {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .temperature-units {
-    padding-left: 0px;
-    display: inline-block;
-    margin-top: 0px;
-    
+  padding-left: 0rem;
+  display: inline-block;
+  margin-top: 0rem;
 }
 
 .temperature {
-    display: inline-block;
+  display: inline-block;
 }
 
-.precipitation {
-    font-size: 18px;
-}
-
+.precipitation,
 .day-condition {
-    font-size: 18px;
+  font-size: 1.125rem;
 }
 
 #condition {
-    font-size: 25px;
+  font-size: 1.563rem;
 }
 
 .forecast:hover {
-   
-    border-radius: 10px;
-    background-color:  #fddccb;
- 
+  border-radius: 0.625rem;
+  background-color: #fddccb;
 }
 
 .weather-forecast-day {
-    font-size: 17px;
+  font-size: 1.063rem;
 }
 
 .weather-forecast-temperatures {
-    font-size: 14px;
+  font-size: 0.875rem;
 }
 .weather-forecast-min {
-    opacity: 0.6;
+  opacity: 0.6;
+}
+
+@media (max-width: 992px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 375px) {
 }
