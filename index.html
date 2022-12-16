@@ -1,79 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Passions+Conflict&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Passions+Conflict&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="src/style.css">
+    <link rel="stylesheet" type="text/css" href="src/style.css" />
   </head>
-<body>
-  <div class="container">
-    <header>
-      <h1 class="display-6">Wheather forecast for</h1>
-      <div class="d-flex justify-content-around text-center current-weather">
-        <div class="col-4 today align-self-center">
-          <div class="day-condition">
-            Last updated: <span id="current-day"></span>
-            <br />
-            <span id="condition"></span>
-          </div>
-          <div class="image-temperature">
-            <img src="" id="main-icon"> 
-            <div class="temperature">
-              <span id="current-temperature" class="current-temperature"></span>
-              <div class="temperature-units">
-                <a href="#" id="celcius" class="celcius active">°C</a>|<a href="#" id="fahrenheit" class=" fahrenheit">°F</a>
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="display-6">Wheather forecast for</h1>
+        <div class="d-flex justify-content-around text-center current-weather">
+          <div class="col-7 col-md-4 today align-self-center">
+            <div class="day-condition">
+              Last updated: <span id="current-day"></span>
+              <br />
+              <span id="condition"></span>
+            </div>
+            <div class="image-temperature">
+              <img src="" id="main-icon" />
+              <div class="temperature">
+                <span
+                  id="current-temperature"
+                  class="current-temperature"
+                ></span>
+                <div class="temperature-units">
+                  <a href="#" id="celcius" class="celcius active">°C</a>|<a
+                    href="#"
+                    id="fahrenheit"
+                    class="fahrenheit"
+                    >°F</a
+                  >
+                </div>
               </div>
             </div>
+            <div class="precipitation">
+              Humidity: <span id="humidity"></span>%
+              <br />
+              Wind: <span id="wind-speed"></span> km/h
+            </div>
           </div>
-          <div class="precipitation">
-            Humidity: <span id="humidity"></span>%
-            <br />
-            Wind: <span id="wind-speed"></span> km/h
-          </div>
+          <div class="col-4 city align-self-center" id="city"></div>
         </div>
-        <div class="col-4 city align-self-center" id="city">
-        </div>
-      </div>
-    </header>
-    <div class="main-content">
-      <form class="search-bar" id="search-bar">
-        <input type="search"  
-          name="input-field" 
-          class="input-field"
-          id="input-field"
-          autocomplete="off"
-          placeholder="Type a city">
-          
-        <input type="submit" 
-          value="Search" 
-          name="search" 
-          class="search">
-        <!-- <input type="button"
+      </header>
+      <div class="main-content">
+        <form class="search-bar" id="search-bar">
+          <input
+            type="search"
+            name="input-field"
+            class="input-field"
+            id="input-field"
+            autocomplete="off"
+            placeholder="Type a city"
+          />
+
+          <input type="submit" value="Search" name="search" class="search" />
+          <!-- <input type="button"
           value="Current location"
           name="current-location"
           class="current-location"
           id="current-location"
       > -->
-      </form>
-      <!-- <div class="d-flex justify-content-center text-center"> -->
-      <div id="forecast">
+        </form>
+        <!-- <div class="d-flex justify-content-center text-center"> -->
+        <div id="forecast"></div>
+        <!-- </div> -->
       </div>
-      <!-- </div> -->
+      <footer>
+        <span class="coder">
+          <a
+            href="https://github.com/Flydeer19/main-project-weather-app"
+            target="_blank"
+            class="open-source"
+            >Open-source code</a
+          >
+          by Oleksandra Kondieieva
+        </span>
+      </footer>
     </div>
-    <footer>
-      <span class="coder">
-        <a href="https://github.com/Flydeer19/main-project-weather-app" target="_blank" class="open-source">Open-source code</a> by Oleksandra Kondieieva
-      </span>
-    </footer>
-  </div>  
-  <script src="src/app.js"></script>
-</body>
+    <script src="src/app.js"></script>
+  </body>
 </html>
